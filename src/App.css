@@ -1,0 +1,126 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Styles globaux */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  padding: 20px;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.App-logo {
+  height: 80px;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Conteneur flexible pour la mise en page en deux colonnes */
+.main-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Styles pour la colonne de gauche (contenu principal) */
+.content {
+  /* flex: 1; */
+  width: 30%;
+}
+
+/* Styles pour la liste des joueurs */
+.players-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.player-item input {
+  margin-right: 10px;
+}
+
+.player-item label {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Styles pour le bouton */
+button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+/* Styles pour la colonne de droite (output) */
+.output {
+  flex: 1;
+  width: 70%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+/* Styles pour les messages dans la console (simulés) */
+.console-log {
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+}
+
+/* Styles pour les messages d'erreur */
+.error {
+  color: red;
+  font-weight: bold;
+}

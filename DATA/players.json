@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "FAYAD Khalil",
+        "espn_league": "fra.1",
+        "sex": 1,
+        "espn_player_link": "https://www.espn.com/soccer/player/_/id/344231/khalil-fayad",
+        "espn_club_link": "https://www.espn.com/soccer/club/_/id/274/montpellier",
+        "espn_player_id": "344231",
+        "espn_club_id": "274"
+    },
+    {
+        "id": 2,
+        "name": "MOREIRA Diego",
+        "espn_league": "fra.1",
+        "sex": 1,
+        "espn_player_link": "https://www.espn.com/soccer/player/_/id/340678/diego-moreira",
+        "espn_club_link": "https://www.espn.com/soccer/club/_/id/180/strasbourg",
+        "espn_player_id": "340678",
+        "espn_club_id": "180"
+    },
+    {
+        "id": 3,
+        "name": "NADJE Chris-Kevin",
+        "espn_league": "ned.1",
+        "sex": 1,
+        "espn_player_link": "https://www.espn.com/soccer/player/_/id/385714/chris-kevin-nadje",
+        "espn_club_link": "https://www.espn.com/soccer/club/_/id/142/feyenoord-rotterdam",
+        "espn_player_id": "385714",
+        "espn_club_id": "142"
+    },
+    {
+        "id": 4,
+        "name": "DEMBI Fred",
+        "espn_league": "fra.2",
+        "sex": 1,
+        "espn_player_link": "https://www.espn.com/soccer/player/_/id/301127/fred-dembi",
+        "espn_club_link": "https://www.espn.com/soccer/club/_/id/11884/red-star-fc-93",
+        "espn_player_id": "301127",
+        "espn_club_id": "11884"
+    },
+    {
+        "id": 5,
+        "name": "DJOUAHRA NAIS",
+        "espn_league": "cro.1",
+        "sex": 1,
+        "espn_player_link": "https://www.espn.com/soccer/player/_/id/281113/nais-djouahra",
+        "espn_club_link": "https://www.espn.com/soccer/team/_/id/2988",
+        "espn_player_id": "281113",
+        "espn_club_id": "2988"
+    },
+    {
+        "id": 6,
+        "name": "DIAWARA Mahamadou",
+        "espn_league": "fra.1",
+        "sex": 1,
+        "espn_player_link": "https://www.espn.com/soccer/player/_/id/133319/mahamadou-diawara",
+        "espn_club_link": "https://www.espn.com/soccer/club/_/id/3236/le-havre-ac",
+        "espn_player_id": "133319",
+        "espn_club_id": "3236"
+    },
+    {
+        "id": 7,
+        "name": "ASSEYI Viviane",
+        "espn_league": "eng.w.1",
+        "sex": 2,
+        "espn_player_link": "https://www.espn.com/soccer/player/_/id/188069/viviane-asseyi",
+        "espn_club_link": "https://www.espn.com/soccer/club/_/id/19975/west-ham-united",
+        "espn_player_id": "188069",
+        "espn_club_id": "19975"
+    },
+    {
+        "id": 8,
+        "name": "RIBADEIRA Louna",
+        "espn_league": "eng.w.1",
+        "sex": 2,
+        "espn_player_link": "https://www.espn.co.uk/football/player/_/id/347190/louna-ribadeira",
+        "espn_club_link": "https://www.espn.co.uk/football/club/_/id/19972/everton",
+        "espn_player_id": "347190",
+        "espn_club_id": "19972"
+    },
+    {
+        "id": 9,
+        "name": "BALTIMORE Sandy",
+        "espn_league": "fra.w.1",
+        "sex": 2,
+        "espn_player_link": "https://www.espn.com/soccer/player/_/id/347097/mathilde-bourdieu",
+        "espn_club_link": "https://www.espn.com/soccer/club/_/id/21640/paris-fc",
+        "espn_player_id": "347097",
+        "espn_club_id": "21640"
+    }
+]
