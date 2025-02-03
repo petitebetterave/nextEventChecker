@@ -21,32 +21,9 @@ const fetchPlayerNextMatch = async (playerLeagueId, playerTeamId) => {
   }
 };
 
-/**
- * Logs the next match details for a player.
- * @param {string} playerName - The name of the player.
- * @param {Object} team - The team data containing the next match information.
- */
-const logNextMatchDetails = (playerName, team) => {
-  if (!team || !team.nextEvent || !team.nextEvent[0]) {
-    console.error(`No next event data found for player: ${playerName}`);
-    return;
-  }
-
-  const fixture = team.nextEvent[0];
-  const matchDate = new Date(fixture.date);
-
-  console.log(
-    `${playerName}\n` +
-    `${matchDate.toLocaleString()}\n` +
-    `${fixture.name.split('at')[0]} : ${fixture.name.split('at')[1]}\n` +
-    `${fixture.shortName}\n` +
-    `${fixture.season.displayName}`
-  );
-};
-
 function App() {
   const [checkedState, setCheckedState] = useState(playersData.map(() => true));
-  const [logs, setLogs] = useState(''); // Pour afficher les logs dans l'interface
+  const [logs, setLogs] = useState([]); // Pour afficher les logs dans l'interface
 
   /**
    * Handles the change event for the checkboxes.
@@ -64,7 +41,7 @@ function App() {
    */
   const handleButtonClick = async () => {
     const selectedPlayers = playersData.filter((_, index) => checkedState[index]);
-    let logMessages = '';
+    const logMessages = [];
 
     const results = await Promise.allSettled(
       selectedPlayers.map(async (player) => {
@@ -77,16 +54,23 @@ function App() {
       if (result.status === 'fulfilled' && result.value.teamData) {
         const fixture = result.value.teamData.team.nextEvent[0];
         const matchDate = new Date(fixture.date);
-        logMessages +=
-          `<strong>${result.value.player.name}\n</strong>` +
-          `${result.value.player.sex === 1 ? 'Masculin' : 'Féminines'}\n` +
-          `${matchDate.toLocaleString()}\n` +
-          `${fixture.name.split('at')[0]} : ${fixture.name.split('at')[1]}\n` +
-          `${fixture.shortName}\n` +
-          `${fixture.season.displayName}\n\n`;
+        logMessages.push(
+          <div key={result.value.player.id}>
+            <strong>{result.value.player.name}</strong><br />
+            {result.value.player.sex === 1 ? 'Masculin' : 'Féminines'}<br />
+            {matchDate.toLocaleString()}<br />
+            {fixture.name.split('at')[0]} : {fixture.name.split('at')[1]}<br />
+            {fixture.shortName}<br />
+            {fixture.season.displayName}<br /><br />
+          </div>
+        );
       } else {
         // Ajoute le message d'erreur en rouge
-        logMessages += `<span class="error">ERREUR - données non accessibles pour : ${result.value?.player.name}</span>\n\n`;
+        logMessages.push(
+          <div key={result.value?.player.id} className="error">
+            ERREUR - données non accessibles pour : {result.value?.player.name}<br /><br />
+          </div>
+        );
       }
     });
 
@@ -114,10 +98,12 @@ function App() {
           <button type="button" onClick={handleButtonClick}>Générer le truc</button>
           </div>
         </div>
-        {logs && (
+        {logs.length > 0 && (
           <div className="output">
             <h3>Résultats:</h3>
-            <div className="console-log" dangerouslySetInnerHTML={{ __html: logs }} />
+            <div className="console-log">
+              {logs}
+            </div>
           </div>
         )}
       </main>
